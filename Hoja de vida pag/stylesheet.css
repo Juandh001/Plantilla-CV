@@ -1,0 +1,265 @@
+/* Variables de colores */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f5f6fa;
+    --white: #ffffff;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Encabezado */
+#encabezado {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#name {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#hora {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+#principal {
+    text-align: center;
+    margin: 120px 0 40px 220px; /* top right bottom left */
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+#principal h1 {
+    margin: 0;
+    padding: 5px 0;
+    color: var(--dark-blue);
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+#principal h1:first-child {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Menú lateral izquierdo */
+.izquierda {
+    position: fixed;
+    left: 0;
+    top: 120px;
+    width: 250px;
+    height: calc(100vh - 120px);
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.info ol {
+    list-style: none;
+    padding: 0;
+}
+
+.button {
+    width: 100%;
+    margin: 5px 0;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Contenido principal */
+.derecha {
+    margin-left: 270px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Estilos para imágenes */
+.foto {
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.redes {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Títulos y texto */
+h4 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+h5 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Pie de página */
+#pie {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#direccion span {
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .izquierda {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+    .derecha {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .foto {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Estilos para spans en habilidades */
+.content span {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 0 5px;
+    font-size: 0.9em;
+}
+
+.derechamin {
+    margin-left: 220px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.derechamin .content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    max-width: 1000px;  /* Limita el ancho máximo */
+    margin: 0 auto;    /* Centra el contenedor */
+}
+
+.derechamin h4 {
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.derechamin ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.derechamin .button {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Estilos específicos para cada red social */
+.derechamin .button:nth-child(1) {
+    background-color: #1877f2; /* Color de Facebook */
+}
+
+.derechamin .button:nth-child(2) {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    /* Gradiente de Instagram */
+}
+
+.derechamin .button:nth-child(3) {
+    background-color: #333; /* Color de GitHub */
+}
+
+.derechamin .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.derechamin .redes {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    filter: brightness(0) invert(1); /* Hace que los íconos sean blancos */
+}
